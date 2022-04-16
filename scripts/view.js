@@ -5,8 +5,6 @@ const renderDOM = (html) => document.getElementById('view').innerHTML = html; //
 export const StartMenu = (props) => {
     const {schedules} = props;
     renderDOM(
-    `${Calendar(schedules)}
-    <hr>
-    <button onclick='start()'>show schedule</button>`
+    `${Calendar(schedules)}`
     )
 }

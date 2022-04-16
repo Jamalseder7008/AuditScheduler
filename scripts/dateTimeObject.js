@@ -2,7 +2,17 @@ flatpickr("input[type=datetime-local]", {
         enableTime: true,
         dateFormat: "m-d-Y H:i",
         altInput: true,
-        altFormat: "F J, Y (h:i K)"
+        altFormat: "F J, Y (h:i K)",
+        minDate: "today",
+        maxDate: new Date().fp_incr(14), // 14 days from now
+        disable: [
+                {
+                        function(date) {
+                                // return true to disable
+                                return (date.getHours() > 23 || date.getHours() < 11);
+                        }
+                }       
+        ]
 
     
 });

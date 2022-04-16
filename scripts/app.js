@@ -32,13 +32,4 @@ window.updateSchedule = async () => {
     await http.sendPUTRequest(PUT_SCHEDULE, scheduled)
 }
 
-window.testPUT = async () => {
-    const data = [
-        {Name: "User1", Time: "2022-04-15 12:30", Audit: "P1"},
-        {Name: "User4", Time: "2022-04-15 1:30", Audit: "P3"},
-        {Name: "User5", Time: "2022-04-14 12:30", Audit: "P2"}
-    ];
-    await http.sendPUTRequest(PUT_SCHEDULE, data);
-}
-
 window.addEventListener('load', start);
