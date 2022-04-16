@@ -1,7 +1,11 @@
+import Calendar from "./schedules.js";
+
+const renderDOM = (html) => document.getElementById('view').innerHTML = html; //Set HTML in view
+
 export const StartMenu = (props) => {
-    const {} = props;
+    const {schedules} = props;
     renderDOM(
-    `${HUD(timer,score)}
+    `${Calendar(schedules)}
     <hr>
     <button onclick='start()'>show schedule</button>`
     )
