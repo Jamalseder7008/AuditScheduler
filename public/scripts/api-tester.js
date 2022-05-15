@@ -28,6 +28,24 @@ async function testReadAllSchedules(){
     document.body.innerHTML += `<p>${JSON.stringify(data)}</p>`
 }
 
+async function testReadSchedule(){
+    const config = new Object();
+    config.method = "GET";
+    const response = await fetch(`http://localhost:3000/get/${readId.value}`, config);
+    const data = await response.json()
+    document.body.innerHTML += `<p>${JSON.stringify(data)}</p>`
+}
+
+async function testUpdateSchedule(){
+    const config = new Object();
+    config.method = "PUT";
+    config.headers = { 'Accept': 'application/json', 'Content-Type': 'application/json'};
+    config.body = JSON.stringify({'name': updateName.value, 'discord': updateDiscord.value, 'dateTime': updateDateTime.value, 'audit':updateAudit.value});
+    const response = await fetch(`http://localhost:3000/update/${updateId.value}`, config);
+    const data = await response.json()
+    document.body.innerHTML += `<p>${JSON.stringify(data)}</p>`
+}
+
 async function testLogin(){
     const config = new Object();
     config.method = "POST";

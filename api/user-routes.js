@@ -25,13 +25,36 @@ async function getscheduleGET(request, response) { //callback fxn for READ ALL
 router.get("/get/:id", userGET); //GET endpoint for READ ONE
 
 async function userGET(request, response){ //callback fxn for READ ONE
-    const documents = await User.findById(request.params.id) //findById() gets a User in DB
+    const documents = await Schedule.findById(request.params.id) //findById() gets a User in DB
     if (documents) { //user exist then send as json
         response.status(200).json(documents);
     }
     else { //otherwise send 404 status
         response.status(404).json({ msg: 'data not found' });
     }
+}
+
+async function scheduleGET(request, response){ //callback fxn for READ ONE
+    const documents = await Schedule.findById(request.params.id) //findById() gets a User in DB
+    if (documents) { //user exist then send as json
+        response.status(200).json(documents);
+    }
+    else { //otherwise send 404 status
+        response.status(404).json({ msg: 'data not found' });
+    }
+}
+router.get("/get/:id", scheduleGET); //GET endpoint for READ ONE
+
+router.put('/update/:id', updateschedulePUT); //PUT endpoint for UPDATE
+
+async function updateschedulePUT (request,response) { //callback fxn for UPDATE
+    const schedule = { _id: request.params.id }; //id to find a user
+    const data = { name: request.body.name, discord: request.body.discord, dateTime: request.body.dateTime, audit: request.body.audit } //data to update in user
+    const document = await Schedule.updateOne(schedule,data); //updateOne() syncs to DB
+    if(!document){ //no user, 404 status
+        return response.status(404).json({ msg: 'data not found' });
+    }
+    return response.status(200).json(document); //otherwise send as json
 }
 
 function verifyToken( request, response, next ) { //Middleware function
@@ -109,7 +132,7 @@ async function registerPOST(request, response){ //callback fxn for endpoint
 
 async function schedulePOST(request, response){ //callback fxn for endpoint
     const {name, discord, dateTime, audit} = request.body; //user fields from req body
-    const newSchedule = new Schedule({ name: name, discord: discord, dateTime: dateTime, audit:audit }); //create new user instance
+    const newSchedule = new Schedule({ name: name, discord: discord, dateTime: dateTime, audit: audit }); //create new user instance
     const document = await newSchedule.save() //schema's save() into db
     const json = {state: true, msg: "data inserted", document: document } //results as json
     response.json(json); //send json with response

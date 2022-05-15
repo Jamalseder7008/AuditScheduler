@@ -12,63 +12,67 @@
         <link rel="stylesheet" href="styles/bootstrap-icons.css">
         <link rel="stylesheet" href="styles/styling.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
     </head>
-    <body>
+    <body class="bg-white">
         <!--Navbar-->
         
-        <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
-            <a class="navbar-brand" href="index.html">
-            <i class="bi bi-calendar"></i> Scheduler
-            </a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
-                <i class="navbar-toggler-icon"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-options">
-            
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="scheduled.html">
-                        <i class="bi bi-calendar"></i> Scheduled
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                        <i class="bi bi-envelope"></i> Scheduler
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="results.html">
-                        <i class="bi bi-check"></i> Results
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="head.html">
-                        <i class="bi bi-check"></i> CLICK ME
-                        </a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </nav>
-        <h1>
-            AUDIT 1
-        </h1>
-        <p>
-            Name:John Doe<br>
-            Student Number: 1234567<br>
-            Date-time: April 11, 2022 12:00 pm<br>
-            Audit type: HW2<br>
-            Comments: get from professor, PASSED
-        </p>
-        <h1>
-            AUDIT 2
-        </h1>
-        <p>
-            Name:Jeffrey horter<br>
-            Student Number: 1234568<br>
-            Date-time: April 10, 2022 12:00 pm<br>
-            Audit type: HW1<br>
-            Comments: get from professor, PASSED
-        </p>
+       <nav class="navbar navbar-expand-md navbar-light bg-light container-fluid">
+        <a class="navbar-brand" href="index.html">
+        <i class="bi bi-calendar"></i> Scheduler
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+            <i class="navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-options">
+        
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="scheduled.html">
+                    <i class="bi bi-calendar"></i> Scheduled
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                    <i class="bi bi-envelope"></i> Scheduler
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="results.html">
+                    <i class="bi bi-check"></i> Results
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="head.html">
+                    <i class="bi bi-check"></i> CLICK ME
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+        <!-- READ ALL -->
+        <button onclick=testReadAllSchedules() > READ ALL</button>
+        <hr>
+
+        <!-- READ ONE -->
+        <button onclick=testReadSchedule() > READ ID</button>
+        <input type="text" id="readId" placeholder="id">
+        <hr>
+
+        <!-- UPDATE -->
+        <button onclick=testUpdateSchedule() > UPDATE </button>
+        <input type="text" id="updateId" placeholder="id">
+        <input type="text" id="updateName" placeholder="name">
+        <input type="text" id="updateDiscord" placeholder="discord">
+        <input type="datetime-local" id="updateDateTime" placeholder="Date-Time">
+        <input type="text" id="updateAudit" placeholder="Update your Audit Type">
+        <hr>
+
+        <script src="scripts/api-tester.js"></script>
+        <script src="scripts/dateTimeObject.js"></script>
+        <script src="scripts/bootstrap.bundle.min.js"></script>
+
+
     </body>
 </html>

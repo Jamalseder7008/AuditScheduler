@@ -10,7 +10,9 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="styles/bootstrap.min.css">
         <link rel="stylesheet" href="styles/bootstrap-icons.css">
+        <link rel="stylesheet" href="styles/styling.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        
     </head>
     <body  class="bg-white">
        <!--Navbar-->
@@ -70,24 +72,12 @@
                     <label>DateTime:</label>
                     <input class="form-control" type="datetime-local" id="dateTime" placeholder="Preferred Date and Time of appointment">
                 </div>
-                <!-- <div class="form-group mb-3">
-                    <label>DateTime2:</label>
-                    <input class="form-control" type="datetime-local" id="Date2" placeholder="Preferred Date and Time of appointment">
-                </div>
-                <div class="form-group mb-3">
-                    <label>DateTime3:</label>
-                    <input class="form-control" type="datetime-local" id="Date3" placeholder="Preferred Date and Time of appointment">
-                </div> -->
-                
                 <div class="form-group mb-3">
                     <label>Audit Type:</label>
-                    <input class="form-control" rows="2" id="audit" placeholder="Audit HW1, Debug Lab03, Audit Class Project"> 
+                    <input class="form-control" type="text" rows="2" id="audit" placeholder="Audit HW1, Debug Lab03, Audit Class Project"> 
                 </div>
                 <button n class='btn btn-primary float-end' onclick="testSchedule()" value="submit" id="submit"> Schedule </button>
-            
-                <!-- READ ALL -->
-                <button onclick=testReadAllSchedules() > READ ALL</button>
-                <hr>
+
         </div>
         <!-- Bootstrap Bundle with Popper -->
         <script src="scripts/bootstrap.bundle.min.js"></script>
