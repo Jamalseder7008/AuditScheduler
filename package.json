@@ -1,5 +1,16 @@
 {
-  "dependencies": {
-    "oracledb": "^5.3.0"
-  }
+    "name": "audit-scheduler",
+    "version": "1.0.0",
+    "description": "App that schedules audits.",
+    "author": "jamalseder, noomanmuhammad, hajrosatrovic",
+    "main": "app.js",
+    "scripts": {
+        "start": "npm install && node app"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.0",
+        "express": "*",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.3.2"
+    }
 }
