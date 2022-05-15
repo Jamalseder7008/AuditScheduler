@@ -107,6 +107,14 @@ async function deleteuserDELETE(request, response) { //callback for DELETE
     response.json(json); //send json with response
 }
 
+router.delete('/deleteSchedule/:id', deletescheduleDELETE) //DELETE endpoint for DELETE
+
+async function deletescheduleDELETE(request, response) { //callback for DELETE
+    const document = await Schedule.deleteOne({ _id: request.params.id }); //deleteOne() syncs to DB
+    const json = { status: 200, msg: 'User data deleted', document: document } //results as json
+    response.json(json); //send json with response
+}
+
 
 router.put('/update/:id', updateuserPUT); //PUT endpoint for UPDATE
 

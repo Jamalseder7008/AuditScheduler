@@ -87,8 +87,15 @@ async function testUpdate(){
     const data = await response.json()
     document.body.innerHTML += `<p>${JSON.stringify(data)}</p>`
 }
-    
 
+async function testScheduleDelete(){
+    const config = new Object();
+    config.method = "DELETE";
+    const response = await fetch(`http://localhost:3000/deleteSchedule/${deleteId.value}`, config);
+    const data = await response.json()
+    
+    document.body.innerHTML += `<p>${JSON.stringify(data)}</p>`
+}
 
 async function testReadAll(){
     const config = new Object();
