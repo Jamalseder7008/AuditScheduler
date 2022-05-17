@@ -1,4 +1,4 @@
-Author: Jamal Seder, Hajrudin Satrovic
+Author: Jamal Seder, Hajrudin Satrovic, Nooman Muhammad
 
 Build a webpage that links to a google forms in the backend that allows for scheduling an audit with the professor
 
