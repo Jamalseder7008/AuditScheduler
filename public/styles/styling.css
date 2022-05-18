@@ -7,19 +7,19 @@ body{
     margin-top:30px;
 }
 
-#Calendar{
+/*#Calendar{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-}
+}*/
 
-#Calendar tr, #Calendar tbody{
+/*#Calendar tr, #Calendar tbody{
     grid-column: 1/-1;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 
-}
+}*/
 
 caption {
     text-align: center;
@@ -29,17 +29,17 @@ caption {
     padding: 10px 0;
 }
 
-#Calendar td, #Calendar th{
+/*#Calendar td, #Calendar th{
     padding: 5px;
     box-sizing: border-box;
     border: 1px solid #ccc;
-}
+}*/
 
-#Calendar .weekdays{
+/*#Calendar .weekdays{
     background: #00ac39;
-}
+}*/
 
-#Calendar .weekdays th{
+/*#Calendar .weekdays th{
     text-align: center;
     text-transform: uppercase;
     line-height: 20px;
@@ -94,13 +94,13 @@ caption {
 #Calendar .other-month {
     background: #f5f5f5;
     color: #666;
-}
+}*/
 
 
 
 @media(max-width: 768px) {
 
-	#calendar .weekdays, #calendar .other-month {
+	/*#calendar .weekdays, #calendar .other-month {
 		display: none;
 	}
 
@@ -122,5 +122,5 @@ caption {
 
 	#calendar .date {
 		align-self: flex-start;
-	}
+	}*/
 }
