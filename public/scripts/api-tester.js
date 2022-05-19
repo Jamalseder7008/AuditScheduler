@@ -25,6 +25,17 @@ async function testReadAllSchedules(){
     config.method = "GET";
     const response = await fetch("http://localhost:3000/getschedule", config);
     const data = await response.json()
+    document.body.innerHTML += 
+        `<h2> All Schedules </h2>
+        <p>${JSON.stringify(data)}</p>
+        <hr>`
+}
+
+async function testReadSchedule(){
+    const config = new Object();
+    config.method = "GET";
+    const response = await fetch(`http://localhost:3000/get/${readId.value}`, config);
+    const data = await response.json()
     document.body.innerHTML += `<p>${JSON.stringify(data)}</p>`
 }
 

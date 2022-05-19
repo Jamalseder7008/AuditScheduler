@@ -1,6 +1,18 @@
 body{
     font-family: Tahoma;
 }
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.pushAway{
+    margin: 10;
+    
+}
 
 .TopTitle {
     text-align: center;

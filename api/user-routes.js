@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken'); //import jsonwebtoken module
 router.post("/register", registerPOST); //POST endpoint for CREATE
 router.post("/schedule", schedulePOST); //POST endpoint for createSchedule
 router.get("/getuser", getuserGET); //GET endpoint for READ ALL
-router.get("/getschedule", getscheduleGET); //GET endpoint for scheduler read ALL
+router.get("/getscheduleTIME", getscheduleGET); //GET endpoint for scheduler read ALL
 
 async function getuserGET(request, response) { //callback fxn for READ ALL
     const documents = await User.find(); //find() gets all Users in DB

@@ -59,11 +59,6 @@
                         <i class="bi bi-check"></i> Results
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="head.html">
-                        <i class="bi bi-check"></i> CLICK ME
-                        </a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -80,31 +75,6 @@
             var Calendar = tui.Calendar;
             console.log(Calendar);
             var calendar = new Calendar('#calendar', {
-                defaultView: 'month',
-                taskView: true,
-                month: {
-                    daynames: daynames,
-                    moreLayerSize: {
-                        height: 'auto'
-                    },
-                    grid: {
-                        header: {
-                            height: 34
-                        },
-                        footer: {
-                            height: 10
-                        }
-                    },
-                    narrowWeekend: true,
-                    startDayOfWeek: 1, // monday
-                    visibleWeeksCount: 3,
-                    visibleScheduleCount: 4
-                },
-                week: {
-                    daynames: daynames,
-                    narrowWeekend: true,
-                    startDayOfWeek: 1 // monday
-                },
                 template: {
                     milestone: function(schedule) {
                         return '<span style="color:red;"><i class="fa fa-flag"></i> ' + schedule.title + '</span>';

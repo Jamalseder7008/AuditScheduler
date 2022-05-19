@@ -42,38 +42,52 @@
                     <i class="bi bi-check"></i> Results
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="head.html">
-                    <i class="bi bi-check"></i> CLICK ME
-                    </a>
-                </li>
-                
             </ul>
         </div>
     </nav>
+    <div class="center">
+        <h1>Results Page</h1>
+
+
         <!-- READ ALL -->
-        <button onclick=testReadAllSchedules() > READ ALL</button>
-        <hr>
+        <div class="pushAway">
+            <button class="btn btn-primary" onclick=testReadAllSchedules() > READ ALL</button>
+
+            <hr>
+        </div>
+        
 
         <!-- READ ONE -->
-        <button onclick=testReadSchedule() > READ ID</button>
-        <input type="text" id="readId" placeholder="id">
-        <hr>
+        <div class="pushAway">
+            <button class="btn btn-primary" onclick=testReadSchedule() > READ ID</button>
+        </div>
+        <div class="pushAway">
+            <input type="text" id="readId" placeholder="id">
+            <hr>
+        </div>
 
         <!-- UPDATE -->
-        <button onclick=testUpdateSchedule() > UPDATE </button>
-        <input type="text" id="updateId" placeholder="id">
-        <input type="text" id="updateName" placeholder="name">
-        <input type="text" id="updateDiscord" placeholder="discord">
-        <input type="datetime-local" id="updateDateTime" placeholder="Date-Time">
-        <input type="text" id="updateAudit" placeholder="Update your Audit Type">
-        <hr>
+        <div class="pushAway">
+            <button class="btn btn-primary" onclick=testUpdateSchedule() > UPDATE </button>
+        </div>
+        <div class="pushAway">
+            <input type="text" id="updateId" placeholder="id">
+            <input type="text" id="updateName" placeholder="name">
+            <input type="text" id="updateDiscord" placeholder="discord">
+            <input type="datetime-local" id="updateDateTime" placeholder="Date-Time">
+            <input type="text" id="updateAudit" placeholder="Update your Audit Type">
+            <hr>
+        </div>
 
         <!-- DELETE -->
-        <button onclick=testScheduleDelete() > DELETE </button>
-        <input type="text" id="deleteId" placeholder="id">
-        <hr>
-
+        <div class="pushAway">
+            <button class="btn btn-primary" onclick=testScheduleDelete() > DELETE </button>
+        </div>
+        <div class="pushAway">
+            <input type="text" id="deleteId" placeholder="id">
+            <hr>
+        </div>
+    </div>
         <script src="scripts/api-tester.js"></script>
         <script src="scripts/dateTimeObject.js"></script>
         <script src="scripts/bootstrap.bundle.min.js"></script>
