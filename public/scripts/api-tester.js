@@ -38,15 +38,13 @@ async function testReadSchedule(){
     config.method = "GET";
     const response = await fetch(`http://localhost:3000/get/${readId.value}`, config);
     const data = await response.json()
-    document.body.innerHTML += `<p>${JSON.stringify(data)}</p>`
-}
-
-async function testReadSchedule(){
-    const config = new Object();
-    config.method = "GET";
-    const response = await fetch(`http://localhost:3000/get/${readId.value}`, config);
-    const data = await response.json()
-    document.body.innerHTML += `<p>${JSON.stringify(data)}</p>`
+    document.body.innerHTML += `
+        <div class="center">
+        <h2>Unique Appointment</h2>
+        <p class="alignTEXT">${JSON.stringify(data)}</p>
+        <hr>
+        </div>
+        `
 }
 
 async function testUpdateSchedule(){
@@ -56,7 +54,12 @@ async function testUpdateSchedule(){
     config.body = JSON.stringify({'name': updateName.value, 'discord': updateDiscord.value, 'dateTime': updateDateTime.value, 'audit':updateAudit.value});
     const response = await fetch(`http://localhost:3000/update/${updateId.value}`, config);
     const data = await response.json()
-    document.body.innerHTML += `<p>${JSON.stringify(data)}</p>`
+    document.body.innerHTML += `
+        <div class="center">
+        <h2>Schedule Updated</h2>
+        <p class="alignTEXT">${JSON.stringify(data)}</p>
+        <hr>
+        </div>`
 }
 
 async function testLogin(){
@@ -107,7 +110,12 @@ async function testScheduleDelete(){
     const response = await fetch(`http://localhost:3000/deleteSchedule/${deleteId.value}`, config);
     const data = await response.json()
     
-    document.body.innerHTML += `<p>${JSON.stringify(data)}</p>`
+    document.body.innerHTML += `
+        <div class="center">
+        <h2> Schedule Deleted </h2>
+        <p class="alignTEXT">${JSON.stringify(data)}</p>
+        <hr>
+        </div>`
 }
 
 async function testReadAll(){
