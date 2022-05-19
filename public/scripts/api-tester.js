@@ -26,9 +26,11 @@ async function testReadAllSchedules(){
     const response = await fetch("http://localhost:3000/getschedule", config);
     const data = await response.json()
     document.body.innerHTML += 
-        `<h2> All Schedules </h2>
-        <p>${JSON.stringify(data)}</p>
-        <hr>`
+        `<div class="center">
+        <h2> All Schedules </h2>
+        <p class="alignTEXT">${JSON.stringify(data)}</p>
+        <hr>
+        </div>`
 }
 
 async function testReadSchedule(){
